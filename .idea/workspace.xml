@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7684d9fd-9749-4ce8-9ca1-4a1896f87cbc" name="Changes" comment="added the the Game class and its html, some example for test added">
-      <change afterPath="$PROJECT_DIR$/.idea/Fourth-Assignment-Steam-Scraper.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Parser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -10,26 +10,24 @@ public class Parser {
     static List<Game> games = new ArrayList<>();
     String path = "C:\\Users\\mobin\\Desktop\\javaa\\work_shop\\Scrapper\\src\\main\\resources\\Games.html";
 
-    public List<Game> sortByName(){
+    public List<Game> sortByName() {
         List<Game> sortedByName = new ArrayList<>(games);
-        // Sort games alphabetically (least)
-        //TODO
-        return  sortedByName;
+        sortedByName.sort(Comparator.comparing(Game::getName));
+        return sortedByName;
     }
 
-    public List<Game> sortByRating(){
+    public List<Game> sortByRating() {
         List<Game> sortedByRating = new ArrayList<>(games);
-        // Sort games by rating (most)
-        //TODO
+        sortedByRating.sort(Comparator.comparingDouble(Game::getRating).reversed());
         return sortedByRating;
     }
 
-    public List<Game> sortByPrice(){
+    public List<Game> sortByPrice() {
         List<Game> sortedByPrice = new ArrayList<>(games);
-        // Sort games by price (most)
-        //TODO
+        sortedByPrice.sort(Comparator.comparingInt(Game::getPrice).reversed());
         return sortedByPrice;
     }
+
 
     public void setUp() throws IOException {
 
