@@ -8,6 +8,7 @@ import java.util.*;
 
 public class Parser {
     static List<Game> games = new ArrayList<>();
+    String path = "C:\\Users\\mobin\\Desktop\\javaa\\work_shop\\Scrapper\\src\\main\\resources\\Games.html";
 
     public List<Game> sortByName(){
         List<Game> sortedByName = new ArrayList<>(games);
@@ -32,14 +33,20 @@ public class Parser {
 
     public void setUp() throws IOException {
 
-        //Parse the HTML file using Jsoup
-        //TODO
+        Document doc = Jsoup.parse(new File(path), "UTF-8");
+        Elements gameElements = doc.select(".game");
 
-        // Extract data from the HTML
-        //TODO
+        for (Element game : gameElements) {
+            String name = game.select(".game-name").text();
+            double rating = Double.parseDouble(game.select(".game-rating").text().split("/")[0]);
+            int price = Integer.parseInt(game.select(".game-price").text().replace(" €", ""));
+            games.add(new Game(name, rating, price));
+        }
 
-        // Iterate through each Game div to extract Game data
-        //TODO
+        // for having exactly 100 games
+        if (games.size() > 100) {
+            games = games.subList(0, 100);
+        }
     }
 
     public static void main(String[] args) {
