@@ -48,6 +48,11 @@ public class Parser {
     }
 
     public static void main(String[] args) {
-        //you can test your code here before you run the unit tests
+        Parser parser = new Parser();
+        try {
+            parser.setUp();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
-}
+    }
