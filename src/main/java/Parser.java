@@ -6,9 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 
 public class Parser {

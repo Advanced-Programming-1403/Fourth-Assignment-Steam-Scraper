@@ -23,7 +23,7 @@ public class Game {
 
     @Override
     public String toString() {
-        return "Game: " + name + ", rating: " + rating + ", price: " + price;
+        return "Game name: " + name + ", rating: " + rating + ", price: " + price;
     }
 
     @Override
