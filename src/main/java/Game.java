@@ -9,7 +9,6 @@ public class Game {
         this.name = name;
         this.rating = rating;
         this.price = price;
-
     }
 
     public String getName() {
@@ -28,15 +27,21 @@ public class Game {
     @Override
     public String toString() {
         //TODO
-        return String.format("Name: %s | Rating: %.2f | Price: $%d", name, rating, price);
+        return String.format("🎮 %-55s ⭐ %-4.1f/5 💵 $%-4d",
+                name,
+                rating,
+                price);
     }
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Game game = (Game) o;
-        return Double.compare(game.rating, rating) == 0 && Double.compare(game.price, price) == 0 && Objects.equals(name, game.name);
+        return Double.compare(game.rating, rating) == 0 &&
+                Double.compare(game.price, price) == 0 &&
+                Objects.equals(name, game.name);
     }
 
 }
